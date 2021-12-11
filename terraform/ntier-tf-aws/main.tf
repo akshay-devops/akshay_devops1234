@@ -1,5 +1,13 @@
 provider "aws" {
-    region = "us-west-2"
+    region = var.region
+}
+
+variable "region" {
+  type = string
+  default = "us-west-2"
+  description = "region in which ntier has to created"
+
+  
 }
 
 # we need to create a vpc resource
